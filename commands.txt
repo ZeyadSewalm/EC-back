@@ -1,0 +1,41 @@
+mc alias set tempminio https://minio-m4og0ockwk0k8k0ogw4cskg0.148.230.125.92.sslip.io gUhGohe5QwPZbXWw aMC1qUfgIRxdtqLkvqPW0CEsCRlYbw44
+mc anonymous set public tempminio/omera-bucket-2025
+
+
+
+DEBUG=False
+DB_NAME=postgresql
+DB_USER=postgres
+DB_PASSWORD=arVkBOaYIccZfR0cQD6Y5pSiDaVlQCLxoKdh1BQ4YNlQDSvwhJU3mcJEPXyYi2cA
+DB_HOST=mwk0oks8g8048k44ogsk8w8w
+DB_PORT=5432
+DB_LIVE=True
+PAYMOB_API_KEY="ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmpiR0Z6Y3lJNklrMWxjbU5vWVc1MElpd2ljSEp2Wm1sc1pWOXdheUk2T1RJNU9EQXlMQ0p1WVcxbElqb2lhVzVwZEdsaGJDSjkuSTBwN1VTQVBaZl9FRHhrLS1XUzl1LXJsSTBwOGpTenE4WUNmSVkyTmhyYU9fOHZVZHVhS3NqcDZVYVkwMU1lS1dzS3VhRG5PMk9ySHAxVF9rdThNU1E="
+CARD_INTEGRATION_ID=4302305
+WALLET_INTEGRATION_ID=4566028
+PAYMOB_HMACK_KEY=53BA55760BB68D9EFE1BB7788CECA8FF 
+FRONTEND_BASE_URL=http://localhost:4200
+EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_HOST_USER=abdelrahmanelsaeid5@gmail.com
+EMAIL_HOST_PASSWORD=rpjeagymlhppcazl
+EMAIL_USE_TLS=True
+DEFAULT_FROM_EMAIL=foodOnline Marketplace <abdelrahmanelsaeid5@gmail.com>
+AWS_ACCESS_KEY_ID=gUhGohe5QwPZbXWw
+AWS_SECRET_ACCESS_KEY=aMC1qUfgIRxdtqLkvqPW0CEsCRlYbw44
+AWS_STORAGE_BUCKET_NAME=omera-bucket-2025
+AWS_S3_ENDPOINT_URL=https://minio-m4og0ockwk0k8k0ogw4cskg0.148.230.125.92.sslip.io
+SECRET_KEY="django-insecure-b4&@p+%so8fq4eg#5zad)u))m7#im(_bebh-l31lo%_#=7$1t-"
+ALLOWED_HOSTS=omera2-production.up.railway.app,127.0.0.1,localhost
+CSRF_TRUSTED_ORIGINS=https://omera2-production.up.railway.app,http://127.0.0.1:8000
+
+
+
+
+
+
+mv /usr/share/nginx/html/dist/omera/* /usr/share/nginx/html/
+
+
+nginx -s reload
