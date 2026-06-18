@@ -3,6 +3,7 @@ boto3==1.40.0
 botocore==1.40.0
 certifi==2024.2.2
 charset-normalizer==3.3.2
+dj-database-url==2.1.0
 Django==4.2
 django-cors-headers==3.14.0
 django-environ==0.11.2

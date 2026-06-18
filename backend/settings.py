@@ -105,8 +105,9 @@ if DEBUG:
     }
 else:
     if os.environ.get('DATABASE_URL'):
+        import dj_database_url
         DATABASES = {
-            'default': env.db('DATABASE_URL')
+            'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'), conn_max_age=600)
         }
     else:
         DATABASES = {
