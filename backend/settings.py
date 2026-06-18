@@ -34,7 +34,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY", "insecure-default-key")
 DEBUG = env.bool("DEBUG", False)
 ALLOWED_HOSTS = [host.strip() for host in os.environ.get("ALLOWED_HOSTS", "127.0.0.1,localhost").split(",") if host.strip()]
-CSRF_TRUSTED_ORIGINS = [origin.strip() for origin in os.environ.get("CSRF_TRUSTED_ORIGINS", "http://127.0.0.1:8000,http://localhost:8000").split(",") if origin.strip()]
+CSRF_TRUSTED_ORIGINS = [
+    origin.strip() 
+    for origin in os.environ.get(
+        "CSRF_TRUSTED_ORIGINS", 
+        "http://127.0.0.1:8000,http://localhost:8000,https://frolicking-speculoos-44669d.netlify.app"
+    ).split(",") 
+    if origin.strip()
+]
 
 # Application definition
 
@@ -281,6 +288,10 @@ REST_FRAMEWORK = {
 
 
 BASE_URL = os.environ.get("BASE_URL", "")
+
+# Add BASE_URL to CORS if it's set
+if BASE_URL and BASE_URL not in CORS_ALLOWED_ORIGINS:
+    CORS_ALLOWED_ORIGINS.append(BASE_URL)
 
 
 
